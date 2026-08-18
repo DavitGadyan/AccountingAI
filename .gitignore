@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment — never commit credentials or an EFIN
+.env
+.env.local
+.env.*.local
+
+# Local artefacts
+.DS_Store
+.playwright-mcp/
+*.log

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light palette is defined on bare :root so a page with no data-theme attribute still
+   has a complete set of colours. Dark only redefines; it never introduces. */
+:root {
+  --canvas: 250 250 249;
+  --surface: 255 255 255;
+  --surface-raised: 245 245 244;
+  --surface-active: 231 229 228;
+  --surface-sunken: 241 240 238;
+  --border: 231 229 228;
+  --text-primary: 28 25 23;
+  --text-secondary: 87 83 78;
+  --text-tertiary: 120 113 108;
+  --accent: 13 96 148;
+
+  --required: 180 35 24;
+  --protective: 146 64 14;
+  --analysis: 113 63 18;
+  --cleared: 21 94 66;
+  --blocking: 153 27 27;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+:root[data-theme="dark"] {
+  --canvas: 12 12 14;
+  --surface: 24 24 27;
+  --surface-raised: 32 32 36;
+  --surface-active: 45 45 50;
+  --surface-sunken: 17 17 20;
+  --border: 52 52 58;
+  --text-primary: 250 250 249;
+  --text-secondary: 190 186 182;
+  --text-tertiary: 148 143 138;
+  --accent: 96 178 232;
+
+  --required: 248 113 113;
+  --protective: 251 191 36;
+  --analysis: 250 204 21;
+  --cleared: 52 211 153;
+  --blocking: 248 113 113;
+}
+
+body {
+  background-color: rgb(var(--canvas));
+  color: rgb(var(--text-primary));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures everywhere money appears. Ragged decimal columns in a tax workpaper
+   make a reviewer slower, and reviewer speed is the entire margin on a fixed fee. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
